@@ -1,0 +1,81 @@
+.article
+	margin 0 auto
+
+	h1
+		overflow hidden
+		white-space nowrap
+		text-overflow ellipsis
+	.time
+		text-align center
+	img
+		display block
+@media (min-width 415px)
+	.article
+		padding 20px
+		width 1200px
+		margin 0 auto
+		h1
+			font-size 36px
+			line-height 2
+			text-align center
+			padding 0 80px
+		.author
+			text-align right
+			padding-right 14px
+			&:before
+				content "作者"
+		.time 
+			text-align center
+		img
+			margin 10px auto
+			width 320px
+			height @width
+		.content
+			text-indent 28px
+			font-size 14px
+			line-height 20px
+@media (max-width 414px)
+	.article
+		position relative
+		margin 5px
+		padding 5px
+		h1
+			margin-left 110px
+			font-size 20px
+			line-height 24px
+		.time
+			position absolute
+			bottom 5px
+			right 40px
+			line-height 12px
+			font-size 12px
+		.author
+			position absolute
+			right 10px
+			bottom 5px
+			font-size 12px
+		img
+			position absolute
+			top 5px
+			left 5px
+			width 100px 
+			height @width
+		.content
+			display -webkit-box
+			-webkit-line-clamp 3
+			-webkit-box-orient vertical
+			margin-left 105px
+			font-size 12px
+			line-height 16px
+			overflow hidden
+			text-overflow ellipsis
+			margin-bottom 25px
+@media (min-width 321px)
+	.article
+		width 310px
+@media (min-width 321px) and (max-width 375px)
+	.article
+		width 365px
+@media (min-width 376px) and (max-width 414px)
+	.article
+		width 414px

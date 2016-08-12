@@ -1,0 +1,49 @@
+.banner
+	position relative
+	width 20rem
+	height 10rem
+	overflow hidden
+	a
+		position absolute
+		top 0
+		display block
+		width @width
+		height @height
+		background-size 100% 100%
+		background-repeat no-repeat
+		opacity 0
+		&:nth-of-type(1)
+			opacity 1
+			z-index 1
+		&.current
+			z-index 1
+			animation slide .5s forwards
+			opacity 1
+		&.previous
+			z-index 1
+			animation previous .5s forwards
+			opacity 1
+	.indicator
+		bottom .6rem
+		width 20rem
+		position absolute
+		z-index 2
+		text-align center
+		em
+			margin-right .6rem
+			padding .06rem .36rem
+			background-color rgb(0,128,255)
+			color white
+			font-size .75rem
+			&.current
+				background-color rgb(255,128,0)				
+@keyframes slide
+	from
+		left 20rem
+	to
+		left 0
+@keyframes previous
+	from 
+		left 0
+	to 
+		left -20rem		
